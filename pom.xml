@@ -39,8 +39,9 @@
 <!--				<version>2.3.2</version>-->
 				<configuration>
 					<goals>install</goals>
-					<localCheckout>true</localCheckout>
-					<pushChanges>false</pushChanges>
+<!--					<localCheckout>true</localCheckout>-->
+<!--					<pushChanges>false</pushChanges>-->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 <!--				<version>2.0</version>-->
 			</plugin>
