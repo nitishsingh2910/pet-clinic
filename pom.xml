@@ -39,6 +39,8 @@
 <!--				<version>2.3.2</version>-->
 				<configuration>
 					<goals>install</goals>
+					<localCheckout>true</localCheckout>
+					<pushChanges>false</pushChanges>
 				</configuration>
 <!--				<version>2.0</version>-->
 			</plugin>
