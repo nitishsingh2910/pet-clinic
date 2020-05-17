@@ -1,6 +1,8 @@
 package guru.springframework.sfgpetclinic.model;
 
-public class PetType {
+import com.sun.xml.internal.rngom.parse.host.Base;
+
+public class PetType extends Base {
 
     private String name;
 
