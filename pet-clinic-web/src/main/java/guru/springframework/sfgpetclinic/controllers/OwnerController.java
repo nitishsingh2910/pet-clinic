@@ -5,6 +5,7 @@ import guru.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -90,7 +91,10 @@ public class OwnerController {
     }
 
     @PostMapping("/{ownerId}/edit")
-    public String processUpdateOwnerForm(Owner owner, BindingResult result, @PathVariable Long ownerId){
+    public String processUpdateOwnerForm(@Validated Owner owner, BindingResult result, @PathVariable Long ownerId){
+        if (result.hasErrors()) {
+            return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+        }
         owner.setId(ownerId);
         Owner savedOwner = ownerService.save(owner);
         return "redirect:/owners/"+savedOwner.getId();
