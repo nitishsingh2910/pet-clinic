@@ -1,4 +1,4 @@
-# sfg-pet-clinic
-SFT Pet Clinic
+# pet-clinic
+Pet Clinic
 
 Adding Circle CI for CI
